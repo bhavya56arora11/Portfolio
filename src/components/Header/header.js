@@ -10,7 +10,9 @@ export default function Header() {
   const [scrollNav, setScrollNav] = useState(false);
 
   const scrollTop = () => {
-    animateScroll.scrollToTop();
+    animateScroll.scrollToTop({
+      duration: 100, 
+    });
   };
 
   const changeNav = () => {
@@ -28,6 +30,7 @@ export default function Header() {
       window.removeEventListener("scroll", changeNav);
     };
   }, []);
+
   useEffect(() => {
     document.body.classList.toggle("no-scroll", showMenu);
   }, [showMenu]);
@@ -48,8 +51,11 @@ export default function Header() {
                   spy={true}
                   smooth={true}
                   offset={-40}
-                  duration={50}
-                  onClick={() => setShowMenu(!showMenu)}
+                  duration={0}
+                  onClick={() => {
+                    setShowMenu(!showMenu);
+                    scrollTop();
+                  }}
                 >
                   Home
                 </Link>
