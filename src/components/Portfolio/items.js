@@ -1,21 +1,23 @@
 import React from "react";
 
-const items = ({ projectItems }) => {
+const Items = ({ projectItems }) => {
   return (
     <>
       {projectItems.map((project) => {
-        const { id, img, title, description } = project;
+        const { id, img, title, description,url } = project;
         return (
-          <div className="portfolio-items card card-two" key={id}>
+          <div className="portfolio-item card-two" key={id}>
             <div className="portfolio-img-wrapper">
-              <img src={img} className="portfolio-img"></img>
+              <img src={img} className="portfolio-img" alt={title} />
             </div>
 
-            <h3 className="portfolio-title">{title}</h3>
-            <p className="portfolio-description">{description}</p>
-            <button>
-  <span>View</span>
-</button>
+            <div className="portfolio-content">
+              <h3 className="portfolio-title">{title}</h3>
+              <p className="portfolio-description">{description}</p>
+              <button>
+                <span><a href={url} target="blank">View</a></span>
+              </button>
+            </div>
           </div>
         );
       })}
@@ -23,4 +25,4 @@ const items = ({ projectItems }) => {
   );
 };
 
-export default items;
+export default Items;

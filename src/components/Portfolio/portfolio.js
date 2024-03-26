@@ -12,7 +12,7 @@ const Portfolio = () => {
       <p className="section-subtitle">
         My <span>Projects</span>
       </p>
-      <div className="portfolio-container container grid">
+      <div className="portfolio-container container">
         <Items projectItems={projectItems}/>
       </div>
     </section>

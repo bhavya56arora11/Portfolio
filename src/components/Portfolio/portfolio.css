@@ -41,14 +41,11 @@
     font-size: 30px;
 }
 
-.card {
+.card-two {
     overflow: hidden;
     text-align: center;
     position: relative;
     box-sizing: border-box;
-}
-
-.card-two {
     padding: 30px;
     border-radius: 20px;
     border: 2px solid antiquewhite;
@@ -96,6 +93,11 @@ button:hover span {
 button:hover span:after {
     opacity: 1;
     right: 0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
