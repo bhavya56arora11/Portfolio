@@ -1,6 +1,6 @@
 import VWorld from './Virtual World.png';
 import Portfolio from './Portfolio.png';
-import Daankaren from './DaanKaren.png';
+import Daankaren from './Daankaren.png';
 import UMatter from './UMatter.png';
 
 export const projects = [
