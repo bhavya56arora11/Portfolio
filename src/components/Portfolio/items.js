@@ -14,9 +14,11 @@ const Items = ({ projectItems }) => {
             <div className="portfolio-content">
               <h3 className="portfolio-title">{title}</h3>
               <p className="portfolio-description">{description}</p>
+              <a href={url} target="blank">
               <button>
-                <span><a href={url} target="blank">View</a></span>
+              <span>View</span>
               </button>
+              </a>
             </div>
           </div>
         );

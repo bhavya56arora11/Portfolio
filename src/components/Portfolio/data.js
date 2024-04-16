@@ -23,7 +23,7 @@ export const projects = [
         img:Daankaren,
         title:"Daankaren",
         description:'A donation platform that helps the users to select campaigns of their choice and donate money or other goods as per their will.(This project is in progress)',
-        url:''
+        url:'https://daankarendeployed-1.onrender.com/'
     },
     {
         id:4,
