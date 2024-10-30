@@ -16,7 +16,7 @@ function About() {
         <div className="about-data">
           <Info />
 
-          <a href={cv} download="ATS_Resume.pdf">
+          <a href={cv} download="Bhavya_Arora.pdf">
             <div class="button">
               Download CV<span class="button-border"></span>
             </div>
