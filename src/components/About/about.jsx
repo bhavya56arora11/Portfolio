@@ -2,7 +2,7 @@ import React from "react";
 import Info from "./info";
 import "./about.css";
 import image from "./image.png";
-import cv from "./ATS Resume.pdf"
+import cv from "./Resume.pdf"
 import "../App.css";
 
 function About() {

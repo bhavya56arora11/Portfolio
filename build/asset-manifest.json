@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.8970ed8e.css",
-    "main.js": "/Portfolio/static/js/main.c2aea333.js",
+    "main.css": "/Portfolio/static/css/main.60849da0.css",
+    "main.js": "/Portfolio/static/js/main.5ebe5219.js",
     "static/media/image.png": "/Portfolio/static/media/image.6f787cec734a774122f1.png",
+    "static/media/Daankaren.png": "/Portfolio/static/media/Daankaren.7aab43cadd36597b34f6.png",
     "static/media/Portfolio.png": "/Portfolio/static/media/Portfolio.f2cacb6034532fbbe621.png",
+    "static/media/UMatter.png": "/Portfolio/static/media/UMatter.29e21b3aa2c9a32b3a97.png",
     "static/media/Virtual World.png": "/Portfolio/static/media/Virtual World.37d2229e556893bb2ff8.png",
-    "static/media/ATS Resume.pdf": "/Portfolio/static/media/ATS Resume.4c7db7167ae20aa4d079.pdf",
+    "static/media/Resume.pdf": "/Portfolio/static/media/Resume.fedd08d911aa7137f2c6.pdf",
     "static/media/atom.png": "/Portfolio/static/media/atom.17e5cb984343d1346ebd.png",
     "static/media/sql-server.png": "/Portfolio/static/media/sql-server.64b3eb63f995c0da35b3.png",
     "static/media/node-js.png": "/Portfolio/static/media/node-js.e328955d6bbbf3ebc72b.png",
@@ -15,11 +17,11 @@
     "static/media/css-3.png": "/Portfolio/static/media/css-3.463e319bad8e0edf1ef7.png",
     "static/media/js.png": "/Portfolio/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/Portfolio/index.html",
-    "main.8970ed8e.css.map": "/Portfolio/static/css/main.8970ed8e.css.map",
-    "main.c2aea333.js.map": "/Portfolio/static/js/main.c2aea333.js.map"
+    "main.60849da0.css.map": "/Portfolio/static/css/main.60849da0.css.map",
+    "main.5ebe5219.js.map": "/Portfolio/static/js/main.5ebe5219.js.map"
   },
   "entrypoints": [
-    "static/css/main.8970ed8e.css",
-    "static/js/main.c2aea333.js"
+    "static/css/main.60849da0.css",
+    "static/js/main.5ebe5219.js"
   ]
 }

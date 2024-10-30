@@ -34,10 +34,11 @@ body.no-scroll {
 
 .nav-logo {
   color: rgb(100, 21, 173);
-  font-size: 30px;
-  font-weight: 700;
-  font-family: "Tourney", sans-serif;
+  font-size: 40px;
+  font-weight: 1000;
+  font-family: "Protest Revolution", sans-serif;
   font-optical-sizing: auto;
+  font-style: normal;
   cursor: pointer;
 }
 

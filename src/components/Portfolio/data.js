@@ -1,6 +1,6 @@
 import VWorld from './Virtual World.png';
 import Portfolio from './Portfolio.png';
-import Daankaren from './DaanKaren.png';
+import Daankaren from './Daankaren.png';
 import UMatter from './UMatter.png';
 
 export const projects = [
@@ -23,7 +23,7 @@ export const projects = [
         img:Daankaren,
         title:"Daankaren",
         description:'A donation platform that helps the users to select campaigns of their choice and donate money or other goods as per their will.(This project is in progress)',
-        url:''
+        url:'https://daankarendeployed-1.onrender.com/'
     },
     {
         id:4,
