@@ -85,5 +85,9 @@ ul {
 }
 .example-2 .icon-content a[data-social="telegram"] .filled,
 .example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
-  background-color: #0088cc;
+  background-color: #194c65b7;
+}
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0e8acd9d;
 }

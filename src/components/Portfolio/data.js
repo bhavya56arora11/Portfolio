@@ -2,15 +2,15 @@ import VWorld from "./Virtual World.png";
 import Portfolio from "./Portfolio.png";
 import Daankaren from "./DaanKaren.png";
 import UMatter from "./UMatter.png";
+import FakeNews from "./Fake News.png";
 
 export const projects = [
   {
     id: 1,
-    img: UMatter,
+    img: FakeNews,
     title: "Fake News Detection API",
     description:
-      "Created a fake news detection API endpoint that can be integrated into different platforms to classify news articles",
-    url: "https://bhavya56arora11.github.io/SIH-Project/",
+      "Created a fake news detection API endpoint that can be integrated into different platforms to classify news articles"
   },
   {
     id: 2,
