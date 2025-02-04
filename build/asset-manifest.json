@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.60849da0.css",
-    "main.js": "/Portfolio/static/js/main.5ebe5219.js",
-    "static/media/image.png": "/Portfolio/static/media/image.6f787cec734a774122f1.png",
-    "static/media/Daankaren.png": "/Portfolio/static/media/Daankaren.7aab43cadd36597b34f6.png",
+    "main.css": "/Portfolio/static/css/main.f4cc7c8a.css",
+    "main.js": "/Portfolio/static/js/main.4893b0e6.js",
+    "static/media/DaanKaren.png": "/Portfolio/static/media/DaanKaren.7aab43cadd36597b34f6.png",
     "static/media/Portfolio.png": "/Portfolio/static/media/Portfolio.f2cacb6034532fbbe621.png",
     "static/media/UMatter.png": "/Portfolio/static/media/UMatter.29e21b3aa2c9a32b3a97.png",
+    "static/media/image.jpg": "/Portfolio/static/media/image.59f433b6037d2fe120e0.jpg",
     "static/media/Virtual World.png": "/Portfolio/static/media/Virtual World.37d2229e556893bb2ff8.png",
-    "static/media/Resume.pdf": "/Portfolio/static/media/Resume.fedd08d911aa7137f2c6.pdf",
+    "static/media/Bhavya_Arora.pdf": "/Portfolio/static/media/Bhavya_Arora.d68629e66421c2477186.pdf",
     "static/media/atom.png": "/Portfolio/static/media/atom.17e5cb984343d1346ebd.png",
     "static/media/sql-server.png": "/Portfolio/static/media/sql-server.64b3eb63f995c0da35b3.png",
     "static/media/node-js.png": "/Portfolio/static/media/node-js.e328955d6bbbf3ebc72b.png",
     "static/media/c++.png": "/Portfolio/static/media/c++.24a8f93854ab092f17a7.png",
+    "static/media/Fake News.png": "/Portfolio/static/media/Fake News.909034fac39b88fd54eb.png",
     "static/media/mongodb.png": "/Portfolio/static/media/mongodb.7a16fc61d457c9e340e2.png",
     "static/media/java.png": "/Portfolio/static/media/java.f5dd86c3ef6ef3f85acf.png",
     "static/media/css-3.png": "/Portfolio/static/media/css-3.463e319bad8e0edf1ef7.png",
     "static/media/js.png": "/Portfolio/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/Portfolio/index.html",
-    "main.60849da0.css.map": "/Portfolio/static/css/main.60849da0.css.map",
-    "main.5ebe5219.js.map": "/Portfolio/static/js/main.5ebe5219.js.map"
+    "main.f4cc7c8a.css.map": "/Portfolio/static/css/main.f4cc7c8a.css.map",
+    "main.4893b0e6.js.map": "/Portfolio/static/js/main.4893b0e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.60849da0.css",
-    "static/js/main.5ebe5219.js"
+    "static/css/main.f4cc7c8a.css",
+    "static/js/main.4893b0e6.js"
   ]
 }
