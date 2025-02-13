@@ -1,0 +1,199 @@
+.about-container {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  column-gap: 4rem;
+}
+
+.about-img {
+  width: 350px;
+  border-radius: 1.5rem;
+  justify-self: center;
+  max-width: 350px;
+  box-shadow: 0 0 20px rgba(250, 235, 215, 0.288);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.about-data {
+  text-align: center;
+}
+
+.about-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; 
+  margin-bottom: var(--mb-2);
+}
+
+.about-box {
+  background-color: beige;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  text-align: center;
+  padding: 1.5rem;
+  color: black;
+  font-family: "Truculenta", sans-serif;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 160px; 
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .about-info {
+    flex-direction: column; 
+    gap: 1rem;
+  }
+}
+
+.about-icon {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
+}
+
+.about-title {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.about-subtitle {
+  font-size: var(--tiny-font-size);
+}
+
+@media screen and (max-width: 992px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+
+  .about-img {
+    width: 220px;
+  }
+
+  .about-box {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .about-data {
+    text-align: center;
+  }
+
+  .about-info {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-container {
+    grid-template-columns: repeat(3, 1fr)
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .about-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.about-section {
+  color: #fff;
+  padding: 4rem 0;
+  font-family: "Doppio One", sans-serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.section-subtitle {
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #bbb;
+}
+
+.button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #f4f0ff;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  background: linear-gradient(180deg, rgba(100, 21, 173, 0) 0%, rgba(100, 21, 173, 0.8) 100%), rgba(138, 43, 226, 0.24);
+}
+
+.button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: .5rem;
+  background: linear-gradient(180deg, rgba(100, 21, 173, 0) 0%, rgba(80, 27, 130, 0.8) 100%), rgba(44, 4, 82, 0.24);
+  box-shadow: inset 0 0 12px rgba(64, 33, 94, 0.44);
+  z-index: -1;
+}
+
+.button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(100, 21, 173, 0) 0%, rgba(100, 21, 173, 0.8) 100%), rgba(138, 43, 226, 0.24);
+  box-shadow: inset 0 0 12px rgba(100, 21, 173, 0.44);
+  border-radius: .5rem;
+  opacity: 0;
+  z-index: -1;
+  transition: all .3s ease-in;
+}
+
+.button:hover::after {
+  opacity: 1;
+}
+
+.button-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: .5rem;
+  z-index: -1;
+}
+
+.button-border::before {
+  content: "";
+  position: absolute;
+  border-radius: .5rem;
+  padding: 1px;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(61, 11, 107, 0.6) 0%, rgba(100, 21, 173, 0) 100%), linear-gradient(0deg, rgba(100, 21, 173, 0.8), rgba(56, 8, 101, 0.8));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}

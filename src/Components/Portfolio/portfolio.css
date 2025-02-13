@@ -1,0 +1,113 @@
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    font-family: "Truculenta", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+}
+
+.portfolio-img-wrapper {
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+    object-fit: cover;
+}
+
+.portfolio-img {
+    height: 240px;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.portfolio-img-wrapper:hover {
+    transform: scale(1.04);
+}
+
+.portfolio-description {
+    margin-top: 30px;
+    color: wheat;
+    min-height: 170px;
+}
+
+.portfolio-title {
+    font-size: 30px;
+}
+
+.card-two {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid antiquewhite;
+}
+
+button {
+    display: block;
+    border-radius: 4px;
+    background-color: #3d405b;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 6px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0 auto; 
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 10px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+}
