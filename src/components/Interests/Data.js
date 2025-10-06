@@ -1,0 +1,81 @@
+export const interests = [
+  {
+    id: 1,
+    title: "The Witcher 3: Wild Hunt",
+    category: "Gaming",
+    description:
+      "My all-time favorite game. The story, the world, the choices - everything is perfect.",
+    quote: '"Evil is evil. Lesser, greater, middling... it\'s all the same."',
+    icon: "⚔️",
+    size: "large",
+    type: "content",
+  },
+  {
+    id: 2,
+    type: "image",
+    src: "/assets/images/witcher-bg.jpeg",
+    alt: "The Witcher",
+    size: "medium",
+  },
+  {
+    id: 3,
+    title: "Harry Potter Universe",
+    category: "Books & Movies",
+    description:
+      "A proud Potterhead. Love both the books and the movies equally.",
+    quote: '"After all this time? Always."',
+    icon: "⚡",
+    size: "medium",
+    type: "content",
+  },
+  {
+    id: 4,
+    title: "Friends Forever",
+    category: "TV Shows",
+    description: "My favorite show of all time. Could I BE any more obsessed?",
+    quote: '"How you doin\'?"',
+    icon: "☕",
+    size: "small",
+    type: "content",
+  },
+  {
+    id: 5,
+    title: "The Dark Knight",
+    category: "Favorite Character",
+    description:
+      "Batman is my favorite fictional character. The complexity, the duality, the legend.",
+    quote: '"I\'m whatever Gotham needs me to be."',
+    icon: "🦇",
+    size: "medium",
+    type: "content",
+  },
+  {
+    id: 6,
+    type: "image",
+    src: "/assets/images/potter-bg.png",
+    alt: "Harry Potter",
+    size: "medium",
+  },
+  {
+    id: 7,
+    title: "Mystery & Crime",
+    category: "Reading",
+    description:
+      'Agatha Christie is my favorite author. "The Murder of Roger Ackroyd" - pure brilliance.',
+    quote:
+      '"The impossible could not have happened, therefore the impossible must be possible."',
+    icon: "📚",
+    size: "large",
+    type: "content",
+  },
+  {
+    id: 8,
+    title: "Cinema Lover",
+    category: "Movies",
+    description: "From Adam Sandler comedies to Marvel epics - I love it all.",
+    quote: "Movies are my escape.",
+    icon: "🎬",
+    size: "small",
+    type: "content",
+  },
+];

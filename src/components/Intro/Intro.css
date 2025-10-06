@@ -1,0 +1,154 @@
+.intro-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+.intro-video-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.intro-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .intro-video {
+    display: block;
+  }
+}
+
+.intro-fallback-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .intro-fallback-bg {
+    display: none;
+  }
+}
+
+.intro-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: 10;
+}
+
+.intro-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.intro-text {
+  text-align: center;
+  color: white;
+  padding: 0 1.5rem;
+}
+
+.intro-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .intro-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro-title {
+    font-size: 6rem;
+  }
+}
+
+.intro-name {
+  color: #60a5fa;
+}
+
+.intro-subtitle {
+  font-size: 1.25rem;
+  color: #e2e8f0;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .intro-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro-subtitle {
+    font-size: 1.875rem;
+  }
+}
+
+.intro-scroll-indicator {
+  margin-top: 3rem;
+  animation: bounce 2s infinite;
+}
+
+@media (min-width: 768px) {
+  .intro-scroll-indicator {
+    margin-top: 4rem;
+  }
+}
+
+.intro-scroll-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.intro-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 30;
+}
+
+.intro-progress-fill {
+  height: 100%;
+  background-color: #60a5fa;
+  transition: width 100ms ease-out;
+}
