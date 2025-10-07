@@ -13,7 +13,7 @@ export const interests = [
   {
     id: 2,
     type: "image",
-    src: "/assets/images/witcher-bg.jpeg",
+    src: "/Portfolio/assets/images/witcher-bg.jpeg",
     alt: "The Witcher",
     size: "medium",
   },
@@ -52,7 +52,7 @@ export const interests = [
   {
     id: 6,
     type: "image",
-    src: "/assets/images/potter-bg.png",
+    src: "/Portfolio/assets/images/potter-bg.png",
     alt: "Harry Potter",
     size: "medium",
   },

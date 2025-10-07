@@ -5,7 +5,7 @@ export const projects = [
     description:
       "A full-stack donation platform supporting both monetary and goods donations with role-based access control and encrypted donor information.",
     tech: ["React", "Node.js", "MongoDB", "Express"],
-    image: "/media/DaanKaren.png",
+    image: "/Portfolio/media/DaanKaren.png",
     github: "",
     live: "https://daankarendeployed-1.onrender.com/",
     category: "Full Stack",
@@ -16,7 +16,7 @@ export const projects = [
     description:
       "Built an API to classify news articles as fake or real using SGD Classifier. Achieved 92% accuracy in detection, with continuous retraining on new data. Provided functionalities for real-time detection, retraining, and user feedback.",
     tech: ["Machine Learning", "Web Scraping", "FastAPI", "Python"],
-    image: "/media/Fake News.png",
+    image: "/Portfolio/media/Fake News.png",
     github: "",
     live: "",
     category: "Web Api",
@@ -51,7 +51,7 @@ export const projects = [
     description:
       "A virtual world interface created entirely with javascript with no pre-installed libraries used where the user can create road maps by choice and place markers on the roads.",
     tech: ["JS"],
-    image: "/media/Virtual World.png",
+    image: "/Portfolio/media/Virtual World.png",
     github: "",
     live: "https://bhavya56arora11.github.io/Virtual-World-Project/",
     category: "Web App",

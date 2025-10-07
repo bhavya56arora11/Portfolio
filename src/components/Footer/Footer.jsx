@@ -44,7 +44,7 @@ export default function Footer() {
   }, []);
 
   const handleDownloadResume = () => {
-    const resumeUrl = "/media/Bhavya Arora.pdf";
+    const resumeUrl = "/Portfolio/media/Bhavya Arora.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
     link.download = "Bhavya Arora Resume.pdf";

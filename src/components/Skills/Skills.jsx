@@ -14,27 +14,27 @@ export default function Skills() {
     {
       category: "Frontend",
       skills: [
-        { icon: "/assets/Icons/atom.png" },
-        { icon: "/assets/Icons/js.png" },
-        { icon: "/assets/Icons/html-5.png" },
-        { icon: "/assets/Icons/css-3.png" },
+        { icon: "/Portfolio/assets/Icons/atom.png" },
+        { icon: "/Portfolio/assets/Icons/js.png" },
+        { icon: "/Portfolio/assets/Icons/html-5.png" },
+        { icon: "/Portfolio/assets/Icons/css-3.png" },
       ],
     },
     {
       category: "Programming",
       skills: [
-        { icon: "/assets/Icons/c++.png" },
-        { icon: "/assets/Icons/java.png" },
-        { icon: "/assets/Icons/python.png" },
+        { icon: "/Portfolio/assets/Icons/c++.png" },
+        { icon: "/Portfolio/assets/Icons/java.png" },
+        { icon: "/Portfolio/assets/Icons/python.png" },
       ],
     },
     {
       category: "Backend",
       skills: [
-        { icon: "/assets/Icons/node-js.png" },
-        { icon: "/assets/Icons/mongodb.png" },
-        { icon: "/assets/Icons/sql-server.png" },
-        { icon: "/assets/Icons/django.png" },
+        { icon: "/Portfolio/assets/Icons/node-js.png" },
+        { icon: "/Portfolio/assets/Icons/mongodb.png" },
+        { icon: "/Portfolio/assets/Icons/sql-server.png" },
+        { icon: "/Portfolio/assets/Icons/django.png" },
       ],
     },
   ];
