@@ -208,7 +208,7 @@ export default function Footer() {
 
           <div className="footer-bottom">
             <p className="footer-copyright">
-              Copyright © 2024 Bhavya Arora. All rights reserved.
+              Copyright © 2025 Bhavya Arora. All rights reserved.
             </p>
           </div>
         </div>

@@ -91,7 +91,7 @@ export default function Intro() {
       <div className="intro-content">
         <div ref={textRef} className="intro-text">
           <h1 className="intro-title">
-            Hi, I'm <span className="intro-name">Bhavya</span>
+            Hi, I'm <span className="intro-name">Bhavya Arora</span>
           </h1>
           <p className="intro-subtitle">
             Software Developer

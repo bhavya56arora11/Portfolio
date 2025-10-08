@@ -1,140 +1,66 @@
 import React, { useRef, useEffect, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./projects.css";
+import "./Projects.css";
 import { projects } from "./Data";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
   const sectionRef = useRef(null);
-  const contentRef = useRef(null);
   const [activeProject, setActiveProject] = useState(0);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const content = contentRef.current;
-    if (!section || !content) return;
+    const handleScroll = () => {
+      const section = sectionRef.current;
+      if (!section) return;
 
-    const total = projects.length;
-    let isAnimating = false;
+      const rect = section.getBoundingClientRect();
+      const sectionHeight = section.offsetHeight;
+      const windowHeight = window.innerHeight;
 
-    const applySectionHeight = () => {
-      section.style.height = `${window.innerHeight * total}px`;
-    };
-    applySectionHeight();
+      if (rect.top <= 0 && rect.bottom > windowHeight) {
+        const scrolledIntoSection = Math.abs(rect.top);
 
-    const st = ScrollTrigger.create({
-      trigger: section,
-      start: "top top",
-      end: `+=${window.innerHeight * (total - 1)}`,
-      pin: content,
-      pinSpacing: false,
-      onUpdate: (self) => {
-        const overallProgress = self.progress || 0;
-        const idx = Math.min(Math.floor(overallProgress * total), total - 1);
+        const maxScroll = sectionHeight - windowHeight;
+        const progress = Math.min(scrolledIntoSection / maxScroll, 1);
 
-        if (idx !== activeProject && !isAnimating) {
-          isAnimating = true;
+        const index = Math.min(
+          Math.floor(progress * projects.length),
+          projects.length - 1
+        );
 
-          const timeline = gsap.timeline({
-            onComplete: () => {
-              isAnimating = false;
-            },
-          });
-
-          timeline
-            .to(".project-details, .project-image-container", {
-              opacity: 0,
-              y: -30,
-              duration: 0.4,
-              ease: "power2.in",
-            })
-            .call(() => {
-              setActiveProject(idx);
-            })
-            .fromTo(
-              ".project-details, .project-image-container",
-              { opacity: 0, y: 30 },
-              {
-                opacity: 1,
-                y: 0,
-                duration: 0.5,
-                ease: "power2.out",
-                stagger: 0.1,
-              }
-            );
+        if (index !== activeProject) {
+          setActiveProject(Math.max(0, index));
         }
-      },
-    });
-
-    const onResize = () => {
-      applySectionHeight();
-      st.refresh();
+      }
     };
 
-    window.addEventListener("resize", onResize);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
     return () => {
-      window.removeEventListener("resize", onResize);
-      st.kill();
-      ScrollTrigger.getAll().forEach((t) => t.kill && t.kill());
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [activeProject, projects.length]);
 
-  const jumpToProject = (index) => {
+  const scrollToProject = (index) => {
     const section = sectionRef.current;
     if (!section) return;
-    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-    const target = sectionTop + index * window.innerHeight;
 
-    gsap.to(".project-details, .project-image-container", {
-      opacity: 0,
-      y: -20,
-      duration: 0.3,
-      onComplete: () => {
-        setActiveProject(index);
-        window.scrollTo({ top: Math.round(target), behavior: "smooth" });
-        gsap.fromTo(
-          ".project-details, .project-image-container",
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }
-        );
-      },
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const windowHeight = window.innerHeight;
+
+    const maxScroll = sectionHeight - windowHeight;
+    const targetProgress = index / projects.length;
+    const targetScroll = sectionTop + maxScroll * targetProgress;
+
+    window.scrollTo({
+      top: targetScroll,
+      behavior: "smooth",
     });
   };
 
-  const getVisibleDots = () => {
-    const total = projects.length;
-
-    let start = activeProject - 2;
-    let end = activeProject + 2;
-
-    if (start < 0) {
-      end += Math.abs(start);
-      start = 0;
-    }
-    if (end >= total) {
-      start -= end - total + 1;
-      end = total - 1;
-    }
-    start = Math.max(0, start);
-    end = Math.min(total - 1, end);
-
-    const dots = [];
-    for (let i = start; i <= end; i++) {
-      const distanceFromActive = Math.abs(i - activeProject);
-      dots.push({
-        index: i,
-        distance: distanceFromActive,
-        isActive: i === activeProject,
-      });
-    }
-    return dots;
-  };
-
   return (
-    <section id="projects" ref={sectionRef} className="projects-section">
-      <div ref={contentRef} className="projects-content">
+    <section id="projects" ref={sectionRef} className="projects-sticky-section">
+      <div className="projects-sticky-content">
         <div className="projects-container">
           <div className="projects-left">
             <div className="projects-header">
@@ -145,7 +71,7 @@ export default function Projects() {
               </p>
             </div>
 
-            <div className="project-details">
+            <div className="project-details" key={`details-${activeProject}`}>
               <div className="project-category">
                 {projects[activeProject].category}
               </div>
@@ -157,65 +83,82 @@ export default function Projects() {
               <div className="project-tech">
                 <span className="tech-label">Tech Stack:</span>
                 <div className="tech-tags">
-                  {projects[activeProject].tech.map((t, i) => (
-                    <span key={i} className="tech-tag">
-                      {t}
+                  {projects[activeProject].tech.map((tech, index) => (
+                    <span key={index} className="tech-tag">
+                      {tech}
                     </span>
                   ))}
                 </div>
               </div>
 
               <div className="project-links">
-                {projects[activeProject].github && (
-                  <a
-                    href={projects[activeProject].github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link"
+              {(projects[activeProject].github) && (
+                <a
+                  href={projects[activeProject].github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                
+                  <svg
+                    className="link-icon"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
                   >
-                    View Code
-                  </a>
-                )}
-                {projects[activeProject].live && (
-                  <a
-                    href={projects[activeProject].live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link primary"
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                  View Code
+                </a>
+              )}
+              {(projects[activeProject].live) && ( 
+                <a
+                  href={projects[activeProject].live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link primary"
+                >
+                  <svg
+                    className="link-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
                   >
-                    Live Demo
-                  </a>
-                )}
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+              )}
               </div>
             </div>
           </div>
 
           <div className="projects-right">
-            <div className="project-image-container">
+            <div
+              className="project-image-container"
+              key={`img-${activeProject}`}
+            >
               <img
                 src={projects[activeProject].image}
                 alt={projects[activeProject].title}
                 className="project-image"
               />
-              <div className="image-overlay" />
+              <div className="image-overlay"></div>
             </div>
 
-            <div
-              className="progress-dots"
-              role="tablist"
-              aria-label="Project navigation"
-            >
-              {getVisibleDots().map((dot, idx) => (
+            <div className="progress-dots">
+              {projects.map((_, index) => (
                 <button
-                  key={dot.index}
-                  type="button"
+                  key={index}
                   className={`progress-dot ${
-                    dot.isActive ? "active" : ""
-                  } distance-${dot.distance}`}
-                  onClick={() => jumpToProject(dot.index)}
-                  aria-current={dot.isActive}
-                  aria-label={`Go to project ${dot.index + 1}`}
-                ></button>
+                    index === activeProject ? "active" : ""
+                  } ${index < activeProject ? "completed" : ""}`}
+                  onClick={() => scrollToProject(index)}
+                  aria-label={`Go to project ${index + 1}`}
+                >
+                </button>
               ))}
             </div>
           </div>
