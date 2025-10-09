@@ -28,7 +28,7 @@ export const projects = [
       "Interactive analytics dashboard for tracking portfolio performance with real-time data visualization and customizable widgets.",
     tech: ["React", "GSAP", "CSS"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+      "/Portfolio/media/portfolio.png",
     github: "",
     live: "",
     category: "Dashboard",
@@ -40,7 +40,7 @@ export const projects = [
       "Extracted entity values (e.g., weight/volume) from product packaging images using OCR. Designed for scalable e-commerce pipelines with strong generalization. Applied weak supervision and TF-IDF features for entity classification.",
     tech: ["Python", "OCR", "TF-IDF"],
     image:
-      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
+      "/Portfolio/media/prodvision.jpg",
     github: "",
     live: "",
     category: "Deep Learning",
