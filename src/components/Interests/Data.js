@@ -5,7 +5,7 @@ export const interests = [
     category: "Gaming",
     description:
       "My all-time favorite game. The story, the world, the choices - everything is perfect.",
-    quote: '"Evil is evil. Lesser, greater, middling... it\'s all the same."',
+    quote: '"Evil is evil. Lesser, greater, middling... it\'s all the same. If I\'m to choose between one evil and another, then I prefer not to choose at all"',
     icon: "⚔️",
     size: "large",
     type: "content",
@@ -22,7 +22,7 @@ export const interests = [
     title: "Harry Potter Universe",
     category: "Books & Movies",
     description:
-      "A proud Potterhead. Love both the books and the movies equally.",
+      "I am a Potterhead. I Love both the books and the movies.",
     quote: '"After all this time? Always."',
     icon: "⚡",
     size: "medium",

@@ -37,4 +37,14 @@ export const experiences = [
       "Worked on an enterprise training platform. Architected scalable backend solutions using Django, optimizing SQL performance. Developed responsive frontend components using ReactJS and Tailwind CSS.Integrated AWS services for secure, scalable deployment",
     achievements: [],
   },
+  {
+    id: 5,
+    type: "work",
+    year: "Dec 2025 - Jan 2026",
+    title: "Software Engineer Intern",
+    institution: "Autoflow AI",
+    description:
+      "Worked on AI-enabled platforms for claims processing and fraud detection in the health-insurance and TPA ecosystem. Contributed as a Full Stack Developer using Next.js for frontend and NestJS for backend services.Designed and developed scalable RESTful APIs with a modular, maintainable architecture. Integrated MongoDB to manage schema-driven application data and optimize query performance. Collaborated via GitHub for version control, code reviews, and feature-based development.",
+    achievements: [],
+  },
 ];

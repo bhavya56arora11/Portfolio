@@ -15,7 +15,7 @@ export default function Intro() {
 
   useEffect(() => {
     const mm = gsap.matchMedia();
-    
+
     mm.add('(min-width: 768px)', () => {
       gsap.to(videoRef.current, {
         yPercent: 30,
@@ -64,9 +64,9 @@ export default function Intro() {
   }, []);
 
   return (
-    <section 
-      id="intro" 
-      ref={containerRef} 
+    <section
+      id="intro"
+      ref={containerRef}
       className="intro-section"
     >
       {/* <div className="intro-video-container">
@@ -96,15 +96,15 @@ export default function Intro() {
           <p className="intro-subtitle">
             Software Developer
           </p>
-          
+
           <div className="intro-scroll-indicator">
-            <svg 
-              className="intro-scroll-icon" 
-              fill="none" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth="2" 
-              viewBox="0 0 24 24" 
+            <svg
+              className="intro-scroll-icon"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
               stroke="currentColor"
             >
               <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -113,7 +113,7 @@ export default function Intro() {
         </div>
       </div>
 
-      
+
     </section>
   );
 }
