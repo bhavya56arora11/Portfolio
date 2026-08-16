@@ -3,7 +3,7 @@ export const experiences = [
     id: 1,
     type: "education",
     year: "2019 - 2020",
-    title: "High School Education",
+    title: "10th CBSE",
     institution: "D.A.V. Public Scholl, Kurukshetra",
     description: "Graduated with honors. ",
     achievements: ["Percentage: 95.6/100"],
@@ -20,18 +20,18 @@ export const experiences = [
   {
     id: 3,
     type: "education",
-    year: "2022 - present",
+    year: "2022 - 2026",
     title: "Bachelor of Computer Science",
     institution: "National Institute of Technology, Kurukshetra",
     description:
       "Currently pursuing with focus on web development, algorithms, and software engineering principles.",
-    achievements: ["CGPA: 9.007/10"],
+    achievements: ["CGPA: 8.98/10"],
   },
   {
     id: 4,
     type: "work",
     year: "June 2025 - July 2025",
-    title: "Full Stack Developer",
+    title: "Full Stack Developer Intern",
     institution: "Saarthee Actionable Insights",
     description:
       "Worked on an enterprise training platform. Architected scalable backend solutions using Django, optimizing SQL performance. Developed responsive frontend components using ReactJS and Tailwind CSS.Integrated AWS services for secure, scalable deployment",
@@ -47,4 +47,14 @@ export const experiences = [
       "Worked on AI-enabled platforms for claims processing and fraud detection in the health-insurance and TPA ecosystem. Contributed as a Full Stack Developer using Next.js for frontend and NestJS for backend services.Designed and developed scalable RESTful APIs with a modular, maintainable architecture. Integrated MongoDB to manage schema-driven application data and optimize query performance. Collaborated via GitHub for version control, code reviews, and feature-based development.",
     achievements: [],
   },
+    {
+    id: 5,
+    type: "work",
+    year: "July 2026 - Present",
+    title: "Software Engineer",
+    institution: "HSBC",
+    description:
+      "Building a Vite + React frontend for an internal finance automation system that replaces a legacy Excel-based workflow, consuming a Python (FastAPI) backend with multiple REST APIs.",
+    achievements: [],
+  }
 ];
